@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | To-Do App</title>
+
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --light: #f9f9f9;
+            --gray: #888;
+            --text: #222;
+            --danger: #e74c3c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-container img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 80px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--text);
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .submit-button {
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a045;
+        }
+
+        .login-redirect {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .login-redirect a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-redirect a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <!-- To-Do Icon 
+        <img src="{% static 'images/todo-icon.png' %}" alt="To-Do Icon"
+            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px;"> -->
+
+
+
+        <h2>Login to To-Do App</h2>
+
+        {% if messages %}
+        <div id="message-container" class="fade-message">
+            {% for message in messages %}
+            <p style="color: red; font-weight: bold; text-align: center; margin-bottom: 10px;">
+                {{ message }}
+            </p>
+            {% endfor %}
+        </div>
+
+        <style>
+            .fade-message {
+                transition: opacity 1s ease-out;
+            }
+
+            .fade-message.hide {
+                opacity: 0;
+            }
+        </style>
+
+        <script>
+            setTimeout(function () {
+                const msg = document.getElementById('message-container');
+                if (msg) {
+                    msg.classList.add('hide');
+                    setTimeout(() => {
+                        msg.style.display = 'none';
+                    }, 1000);
+                }
+            }, 3000);
+        </script>
+        {% endif %}
+
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="fnm">Username</label>
+                <input type="text" id="fnm" name="fnm" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Enter your password" required>
+            </div>
+            <input type="submit" class="submit-button" value="Login">
+        </form>
+
+        <div class="login-redirect">
+            Don’t have an account? <a href="{% url 'signup' %}">Sign up here</a>
+        </div>
+    </div>
+</body>
+
+</html>
