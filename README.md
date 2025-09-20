@@ -22,7 +22,7 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 
 | Dashboard Overview | Task Completed View |
 |------------------|------------------|
-| ![Dashboard](https://via.placeholder.com/350x200.png?text=Dashboard) | ![Completed Tasks](https://via.placeholder.com/350x200.png?text=Completed+Tasks) |
+|  ![Dashboard](screenshots/dashboard.png) | ![Completed Tasks](screenshots/completed.png) |
 
 *(Replace placeholders with your own screenshots.)*
 
