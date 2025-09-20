@@ -41,5 +41,5 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/django-todo-dashboard.git
-cd django-todo-dashboard
+git clone https://github.com/swapnanil99/django-todo-app.git
+
