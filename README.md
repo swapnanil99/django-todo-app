@@ -20,9 +20,10 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 
 ## 🖼 Screenshots
 
-| Dashboard Overview | Task Completed View |
-|------------------|------------------|
-|  ![Dashboard](screenshots/dashboard.png) | ![Completed Tasks](screenshots/completed.png) | ![Completed Tasks](screenshots/Login.png) |
+| Dashboard Overview | Completed Tasks | Login Page |
+|--------------------|-----------------|------------|
+| ![Dashboard](screenshots/dashboard.png) | ![Completed Tasks](screenshots/completed.png) | ![Login](screenshots/Login.png) |
+
 
 ---
 
@@ -40,4 +41,24 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 1. **Clone the repository**
 ```bash
 git clone https://github.com/swapnanil99/django-todo-app.git
+```
+---
+
+## ▶️ Running the Project
+
+1. **Open Command Prompt / Terminal** in your project folder.  
+   Example: Navigate to the folder where `manage.py` exists.
+
+2. **Run the development server**
+```bash
+python manage.py runserver
+```
+You can also specify a custom port (e.g., 8001)
+```bash
+python manage.py runserver 8001
+```
+3. **Open the link in your browser**
+By default:
+```bash
+http://127.0.0.1:8000/
 
