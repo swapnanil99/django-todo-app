@@ -16,16 +16,12 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 - 🖼 Profile Icon – Personalized user profile display.
 - ⚡ Responsive Design – Works on desktops and mobiles.
 
----
-
 ## 🖼 Screenshots
 
 | Dashboard Overview | Completed Tasks | Login Page |
 |--------------------|-----------------|------------|
 | ![Dashboard](screenshots/dashboard.png) | ![Completed Tasks](screenshots/completed.png) | ![Login](screenshots/Login.png) |
 
-
----
 
 ## ⚡ Technologies Used
 
@@ -34,15 +30,12 @@ A **modern, interactive To-Do List Dashboard** built with **Python & Django**. M
 - **Database:** SQLite (default with Django)  
 - **Libraries:** `django.contrib.messages`, `django.contrib.auth`  
 
----
-
 ## 🚀 Installation & Setup
 
 1. **Clone the repository**
 ```bash
 git clone https://github.com/swapnanil99/django-todo-app.git
 ```
----
 
 ## ▶️ Running the Project
 
